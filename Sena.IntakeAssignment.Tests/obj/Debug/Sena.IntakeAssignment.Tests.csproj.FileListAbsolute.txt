@@ -1,0 +1,16 @@
+C:\Users\mroozekrans\Documents\Visual Studio 2013\Projects\Sena.IntakeAssignment\Sena.IntakeAssignment.Tests\bin\Debug\Sena.IntakeAssignment.Tests.dll.config
+C:\Users\mroozekrans\Documents\Visual Studio 2013\Projects\Sena.IntakeAssignment\Sena.IntakeAssignment.Tests\bin\Debug\Sena.IntakeAssignment.Tests.dll
+C:\Users\mroozekrans\Documents\Visual Studio 2013\Projects\Sena.IntakeAssignment\Sena.IntakeAssignment.Tests\bin\Debug\Sena.IntakeAssignment.Tests.pdb
+C:\Users\mroozekrans\Documents\Visual Studio 2013\Projects\Sena.IntakeAssignment\Sena.IntakeAssignment.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mroozekrans\Documents\Visual Studio 2013\Projects\Sena.IntakeAssignment\Sena.IntakeAssignment.Tests\bin\Debug\Sena.IntakeAssignment.Data.dll
+C:\Users\mroozekrans\Documents\Visual Studio 2013\Projects\Sena.IntakeAssignment\Sena.IntakeAssignment.Tests\bin\Debug\Sena.IntakeAssignment.dll
+C:\Users\mroozekrans\Documents\Visual Studio 2013\Projects\Sena.IntakeAssignment\Sena.IntakeAssignment.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Users\mroozekrans\Documents\Visual Studio 2013\Projects\Sena.IntakeAssignment\Sena.IntakeAssignment.Tests\bin\Debug\System.Web.Optimization.dll
+C:\Users\mroozekrans\Documents\Visual Studio 2013\Projects\Sena.IntakeAssignment\Sena.IntakeAssignment.Tests\bin\Debug\Sena.IntakeAssignment.Data.pdb
+C:\Users\mroozekrans\Documents\Visual Studio 2013\Projects\Sena.IntakeAssignment\Sena.IntakeAssignment.Tests\bin\Debug\Sena.IntakeAssignment.pdb
+C:\Users\mroozekrans\Documents\Visual Studio 2013\Projects\Sena.IntakeAssignment\Sena.IntakeAssignment.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\mroozekrans\Documents\Visual Studio 2013\Projects\Sena.IntakeAssignment\Sena.IntakeAssignment.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Users\mroozekrans\Documents\Visual Studio 2013\Projects\Sena.IntakeAssignment\Sena.IntakeAssignment.Tests\bin\Debug\System.Web.Optimization.xml
+C:\Users\mroozekrans\Documents\Visual Studio 2013\Projects\Sena.IntakeAssignment\Sena.IntakeAssignment.Tests\obj\Debug\Sena.IntakeAssignment.Tests.csprojResolveAssemblyReference.cache
+C:\Users\mroozekrans\Documents\Visual Studio 2013\Projects\Sena.IntakeAssignment\Sena.IntakeAssignment.Tests\obj\Debug\Sena.IntakeAssignment.Tests.dll
+C:\Users\mroozekrans\Documents\Visual Studio 2013\Projects\Sena.IntakeAssignment\Sena.IntakeAssignment.Tests\obj\Debug\Sena.IntakeAssignment.Tests.pdb
