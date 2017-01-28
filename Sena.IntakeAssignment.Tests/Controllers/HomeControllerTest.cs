@@ -1,17 +1,33 @@
 ﻿using System.Web.Mvc;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Sena.IntakeAssignment.Controllers;
+using Sena.IntakeAssignment.Data.Interface;
+using NUnit.Framework;
+using Moq;
 
 namespace Sena.IntakeAssignment.Tests.Controllers
 {
-    [TestClass]
+    [TestFixture]
     public class HomeControllerTest
     {
-        [TestMethod]
+        private Mock<IRecordRepository> _recordRepositoryMock;
+
+        [SetUp]
+        public void Initialize()
+        {
+            _recordRepositoryMock = new Mock<IRecordRepository>();
+        }
+
+        [TearDown]
+        public void Terminate()
+        {
+            _recordRepositoryMock = null;
+        }
+
+        [Test]
         public void Index()
         {
             // Arrange
-            var controller = new HomeController();
+            var controller = new HomeController(_recordRepositoryMock.Object);
 
             // Act
             var result = controller.Index() as ViewResult;
@@ -20,11 +36,11 @@ namespace Sena.IntakeAssignment.Tests.Controllers
             Assert.IsNotNull(result);
         }
 
-        [TestMethod]
+        [Test]
         public void About()
         {
             // Arrange
-            var controller = new HomeController();
+            var controller = new HomeController(_recordRepositoryMock.Object);
 
             // Act
             var result = controller.About() as ViewResult;
@@ -33,11 +49,11 @@ namespace Sena.IntakeAssignment.Tests.Controllers
             Assert.AreEqual("Your application description page.", result.ViewBag.Message);
         }
 
-        [TestMethod]
+        [Test]
         public void Contact()
         {
             // Arrange
-            var controller = new HomeController();
+            var controller = new HomeController(_recordRepositoryMock.Object);
 
             // Act
             var result = controller.Contact() as ViewResult;
@@ -46,11 +62,11 @@ namespace Sena.IntakeAssignment.Tests.Controllers
             Assert.IsNotNull(result);
         }
 
-        [TestMethod]
+        [Test]
         public void Records()
         {
             // Arrange
-            var controller = new HomeController();
+            var controller = new HomeController(_recordRepositoryMock.Object);
 
             // Act
             var result = controller.Records() as ViewResult;

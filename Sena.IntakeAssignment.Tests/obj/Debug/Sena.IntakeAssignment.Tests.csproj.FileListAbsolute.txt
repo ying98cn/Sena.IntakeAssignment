@@ -14,3 +14,4 @@ C:\Users\mroozekrans\Documents\Visual Studio 2013\Projects\Sena.IntakeAssignment
 C:\Users\mroozekrans\Documents\Visual Studio 2013\Projects\Sena.IntakeAssignment\Sena.IntakeAssignment.Tests\obj\Debug\Sena.IntakeAssignment.Tests.csprojResolveAssemblyReference.cache
 C:\Users\mroozekrans\Documents\Visual Studio 2013\Projects\Sena.IntakeAssignment\Sena.IntakeAssignment.Tests\obj\Debug\Sena.IntakeAssignment.Tests.dll
 C:\Users\mroozekrans\Documents\Visual Studio 2013\Projects\Sena.IntakeAssignment\Sena.IntakeAssignment.Tests\obj\Debug\Sena.IntakeAssignment.Tests.pdb
+C:\git\Sena.IntakeAssignment\Sena.IntakeAssignment.Tests\obj\Debug\Sena.IntakeAssignment.Tests.csprojResolveAssemblyReference.cache

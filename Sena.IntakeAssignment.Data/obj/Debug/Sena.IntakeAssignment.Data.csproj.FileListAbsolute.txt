@@ -3,3 +3,7 @@ C:\Users\mroozekrans\Documents\Visual Studio 2013\Projects\Sena.IntakeAssignment
 C:\Users\mroozekrans\Documents\Visual Studio 2013\Projects\Sena.IntakeAssignment\Sena.IntakeAssignment.Data\obj\Debug\Sena.IntakeAssignment.Data.dll
 C:\Users\mroozekrans\Documents\Visual Studio 2013\Projects\Sena.IntakeAssignment\Sena.IntakeAssignment.Data\obj\Debug\Sena.IntakeAssignment.Data.pdb
 C:\Users\mroozekrans\Documents\Visual Studio 2013\Projects\Sena.IntakeAssignment\Sena.IntakeAssignment.Data\obj\Debug\Sena.IntakeAssignment.Data.csprojResolveAssemblyReference.cache
+C:\git\Sena.IntakeAssignment\Sena.IntakeAssignment.Data\bin\Debug\Sena.IntakeAssignment.Data.dll
+C:\git\Sena.IntakeAssignment\Sena.IntakeAssignment.Data\bin\Debug\Sena.IntakeAssignment.Data.pdb
+C:\git\Sena.IntakeAssignment\Sena.IntakeAssignment.Data\obj\Debug\Sena.IntakeAssignment.Data.dll
+C:\git\Sena.IntakeAssignment\Sena.IntakeAssignment.Data\obj\Debug\Sena.IntakeAssignment.Data.pdb

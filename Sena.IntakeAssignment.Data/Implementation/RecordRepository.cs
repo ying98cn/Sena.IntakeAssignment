@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using Sena.IntakeAssignment.Data.Model;
+using Sena.IntakeAssignment.Data.Interface;
 
 namespace Sena.IntakeAssignment.Data.Repository
 {
-    public class RecordRepository
+    public class RecordRepository : IRecordRepository
     {
         #region Data
 
