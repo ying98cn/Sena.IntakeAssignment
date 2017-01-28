@@ -40,8 +40,15 @@ namespace Sena.IntakeAssignment.Controllers
 
         public ActionResult Records()
         {
-            var records = _recordRepository.FetchRecordList();
-            return View(records);
+            return View();
         }
+
+        [HttpGet]
+        public JsonResult GetRecords()
+        {
+            var records = _recordRepository.FetchRecordList();
+            return Json(records, JsonRequestBehavior.AllowGet);
+        }
+
     }
 }

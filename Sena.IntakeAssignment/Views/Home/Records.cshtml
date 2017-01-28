@@ -5,3 +5,29 @@
 
 <h2>Records</h2>
 
+<div ng-controller="recordController">
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Artist</th>
+                <th>AlbumTitle</th>
+                <th>CatalogueNumber</th>
+                <th>Title</th>
+                <th>Year</th>
+                <th>IsrcCode</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="record in RecordList">
+                <td>{{ record.Id }}</td>
+                <td>{{ record.Artist }}</td>
+                <td>{{ record.AlbumTitle }}</td>
+                <td>{{ record.CatalogueNumber }}</td>
+                <td>{{ record.Title }}</td>
+                <td>{{ record.Year }}</td>
+                <td>{{ record.IsrcCode }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

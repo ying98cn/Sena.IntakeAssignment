@@ -22,9 +22,20 @@ namespace Sena.IntakeAssignment
                 "~/Scripts/bootstrap.js",
                 "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/angularjs").Include(
+            "~/Scripts/angular.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/angularjsApp")
+                .IncludeDirectory("~/Scripts/app", "*.js")
+                .IncludeDirectory("~/Scripts/app/services", "*.js")
+                .IncludeDirectory("~/Scripts/app/controllers", "*.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/bootstrap.css",
                 "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/bundles/customCss").Include(
+                "~/Content/app/app.css"));
         }
     }
 }
