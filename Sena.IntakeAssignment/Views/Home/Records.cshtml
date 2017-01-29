@@ -5,7 +5,7 @@
 
 <h2>Records</h2>
 
-<div ng-controller="recordController">
+<div ng-controller="recordController" ng-init="init()">
     <table>
         <thead>
             <tr>
@@ -28,96 +28,12 @@
                 <td>{{ record.Title }}</td>
                 <td>{{ record.Year }}</td>
                 <td>{{ record.IsrcCode }}</td>
-                <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#editPopup" ng-click="getSelectedRecord(record.Id)">Edit</button></td>
+                <td>
+                    <button type="button" class="btn btn-primary" data-ng-click="showEditRecordDialog(record)">
+                        <i class="glyphicon glyphicon-pencil"></i> Edit
+                    </button>
+                </td>
             </tr>
         </tbody>
     </table>
-</div>
-
-<!-- Edit popup -->
-<div id="editPopup" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Edit Record</h4>
-            </div>
-            <div class="modal-body">
-                <div class="container" ng-controller="recordController">
-                    <div class="row">
-                        <div class="col-xs-6">
-                            <form name="myForm" class="well" novalidate>
-                                <!-- Artist -->
-                                <div class="form-group"
-                                     ng-class="{ 'has-error': myForm.artist.$dirty && myForm.artist.$invalid }">
-                                    <label class="control-label">Artist name</label>
-                                    <input type="text" name="artist" class="form-control" id="artist" placeholder="Artist name"
-                                           ng-pattern="artistFormat"
-                                           ng-model="record.artist" required>
-                                    <span ng-show="myForm.artist.$dirty && myForm.artist.$invalid">
-                                        <span ng-show="myForm.artist.$error.required" class="control-label">Artist is required.</span>
-                                        <span ng-show="myForm.artist.$error.pattern" class="control-label">Artist contains only letters.</span>
-                                    </span>
-                                </div>
-                                <!-- album Title -->
-                                <div class="form-group"
-                                     ng-class="{ 'has-error': myForm.albumTitle.$dirty && myForm.albumTitle.$invalid }">
-                                    <label class="control-label">Album Title</label>
-                                    <input type="text" name="albumTitle" class="form-control" id="albumTitle" placeholder="Album Title"
-                                           ng-pattern="albumTitleFormat"
-                                           ng-model="record.albumTitle" required>
-                                    <span ng-show="myForm.albumTitle.$dirty && myForm.albumTitle.$invalid">
-                                        <span ng-show="myForm.albumTitle.$error.required" class="control-label">AlbumTitle is required.</span>
-                                        <span ng-show="myForm.albumTitle.$error.pattern" class="control-label">AlbumTitle contains only letters.</span>
-                                    </span>
-                                </div>
-                                <!-- Catalogue Number -->
-                                <div class="form-group"
-                                     ng-class="{ 'has-error': myForm.catalogueNumber.$dirty && myForm.catalogueNumber.$invalid }">
-                                    <label class="control-label">Catalog Number</label>
-                                    <input type="text" name="catalogNumber" class="form-control" id="catalogueNumber" placeholder="catalogue Number"
-                                           ng-pattern="catalogueNumberFormat"
-                                           ng-model="record.catalogueNumber" required>
-                                    <span ng-show="myForm.catalogueNumber.$dirty && myForm.catalogueNumber.$invalid">
-                                        <span ng-show="myForm.catalogueNumber.$error.required" class="control-label">Catalogue Number is required.</span>
-                                        <span ng-show="myForm.catalogueNumber.$error.pattern" class="control-label">Catalogue Number contains only letters.</span>
-                                    </span>
-                                </div>
-                                <!-- Title -->
-                                <div class="form-group"
-                                     ng-class="{ 'has-error': myForm.title.$dirty && myForm.title.$invalid }">
-                                    <label class="control-label">Title</label>
-                                    <input type="text" name="title" class="form-control" id="title" placeholder="Title"
-                                           ng-pattern="titleFormat"
-                                           ng-model="record.title" required>
-                                    <span ng-show="myForm.title.$dirty && myForm.title.$invalid">
-                                        <span ng-show="myForm.title.$error.required" class="control-label">Title is required.</span>
-                                        <span ng-show="myForm.title.$error.pattern" class="control-label">Title contains only letters.</span>
-                                    </span>
-                                </div>
-                                <!-- Year -->
-                                <!-- IsrcCode -->
-                                <div class="form-group checkbox">
-                                    <label>
-                                        <input type="checkbox" name="isreCode" id="isreCode" ng-model="record.isreCode"
-                                               ng-true-value="'true'" ng-false-value="'false'">
-                                        Is RC Code
-                                    </label>
-                                </div>
-                                <p>
-                                    <input type="submit" ng-click="updateRecord()" text="Save"
-                                           ng-disabled="(!myForm.fullname.$dirty || myForm.fullname.$invalid) || (!myForm.email.$dirty || myForm.email.$invalid)">
-                                </p>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-
-    </div>
 </div>

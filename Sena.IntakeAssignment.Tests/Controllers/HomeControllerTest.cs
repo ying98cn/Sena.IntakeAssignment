@@ -74,5 +74,6 @@ namespace Sena.IntakeAssignment.Tests.Controllers
             // Assert
             Assert.IsNotNull(result);
         }
+
     }
 }

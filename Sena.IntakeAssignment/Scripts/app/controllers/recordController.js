@@ -5,38 +5,59 @@
         .module('app')
         .controller('recordController', recordController);
 
-    recordController.$inject = ['$scope', 'recordService']; 
+    recordController.$inject = ['$scope', '$log', 'ngDialog', 'recordService'];
 
-    function recordController($scope, recordService) {
+    function recordController($scope, $log, ngDialog, recordService) {
+        $scope.init = function () {
+            getRecords();
+        }
+
         $scope.record = {
-            'artist': 'wewe',
-            'albumTitle': 'ff',
-            'catalogueNumber': 'ff',
+            'artist': '',
+            'albumTitle': '',
+            'catalogueNumber': '',
             'title': '',
             'year': '',
-            'isrcCode': false
+            'isrcCode': ''
         };
 
         // load record list
-        recordService
-            .getRecords()
-            .success(function (result) {
-                $scope.RecordList = result;
-            });
-
-        // edit record information
-        $scope.editRecord = function () {
-            recordService.updateRecord();
+        function getRecords() {
+            recordService
+                .getRecords()
+                .success(function (result) {
+                    $scope.RecordList = result;
+                })
+                .error(function (result) {
+                    $log.error('something went wrong when getting records due to ', error)
+                });
         }
 
-        // get selected record
-        $scope.getSelectedRecord = function (id) {
-            //var result = 
-            //    $.grep($scope.RecordList, function(e){ 
-            //        return e.id == id; 
-            //    });
-            var result = null;
-            $scope.record = result || $scope.record;
+        // show the edit record dialog when the user clicks on the Edit button
+        $scope.showEditRecordDialog = function (record) {
+            $scope.editRecord = angular.copy(record) || $scope.record;
+
+            ngDialog.openConfirm({
+                template: '/Templates/editRecordDialog.html',
+                className: 'ngdialog-theme-default',
+                closeByDocument: true,
+                scope: $scope
+            }).then(function (editedRecord) { // the save button is clicked
+                recordService.editRecord(editedRecord)
+                .success(function (result) {
+                    if (result.error) {
+                        $log.error(error);
+                    } else {
+                        $log.debug('Record is updated.');
+                        getRecords();
+                    }
+                })
+                .error(function (error) {
+                    $log.error('Unable to edit record: ' + error.message);
+                });
+            }, function () { // the cancel button is clicked
+                $log.debug('Cancel button is clicked.');
+            });
         }
 
     }

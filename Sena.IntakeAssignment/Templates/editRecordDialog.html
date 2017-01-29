@@ -1,0 +1,70 @@
+﻿<div data-ng-controller="recordController">
+    <form name="myForm" class="well" novalidate>
+        <!-- Artist -->
+        <div class="form-group"
+             ng-class="{ 'has-error': myForm.artist.$dirty && myForm.artist.$invalid }">
+            <label class="control-label">Artist name</label>
+            <input type="text" name="artist" class="form-control" id="artist" placeholder="Artist name"
+                   ng-pattern="artistFormat"
+                   ng-model="editRecord.Artist" required>
+            <span ng-show="myForm.artist.$dirty && myForm.artist.$invalid">
+                <span ng-show="myForm.artist.$error.required" class="control-label">Artist is required.</span>
+                <span ng-show="myForm.artist.$error.pattern" class="control-label">Artist contains only letters.</span>
+            </span>
+        </div>
+        <!-- album Title -->
+        <div class="form-group"
+             ng-class="{ 'has-error': myForm.albumTitle.$dirty && myForm.albumTitle.$invalid }">
+            <label class="control-label">Album Title</label>
+            <input type="text" name="albumTitle" class="form-control" id="albumTitle" placeholder="Album Title"
+                   ng-pattern="albumTitleFormat"
+                   ng-model="editRecord.AlbumTitle" required>
+            <span ng-show="myForm.albumTitle.$dirty && myForm.albumTitle.$invalid">
+                <span ng-show="myForm.albumTitle.$error.required" class="control-label">AlbumTitle is required.</span>
+                <span ng-show="myForm.albumTitle.$error.pattern" class="control-label">AlbumTitle contains only letters.</span>
+            </span>
+        </div>
+        <!-- Catalogue Number -->
+        <div class="form-group"
+             ng-class="{ 'has-error': myForm.catalogueNumber.$dirty && myForm.catalogueNumber.$invalid }">
+            <label class="control-label">Catalog Number</label>
+            <input type="text" name="catalogNumber" class="form-control" id="catalogueNumber" placeholder="catalogue Number"
+                   ng-pattern="catalogueNumberFormat"
+                   ng-model="editRecord.CatalogueNumber" required>
+            <span ng-show="myForm.catalogueNumber.$dirty && myForm.catalogueNumber.$invalid">
+                <span ng-show="myForm.catalogueNumber.$error.required" class="control-label">Catalogue Number is required.</span>
+                <span ng-show="myForm.catalogueNumber.$error.pattern" class="control-label">Catalogue Number contains only letters.</span>
+            </span>
+        </div>
+        <!-- Title -->
+        <div class="form-group"
+             ng-class="{ 'has-error': myForm.title.$dirty && myForm.title.$invalid }">
+            <label class="control-label">Title</label>
+            <input type="text" name="title" class="form-control" id="title" placeholder="Title"
+                   ng-pattern="titleFormat"
+                   ng-model="editRecord.Title" required>
+            <span ng-show="myForm.title.$dirty && myForm.title.$invalid">
+                <span ng-show="myForm.title.$error.required" class="control-label">Title is required.</span>
+                <span ng-show="myForm.title.$error.pattern" class="control-label">Title contains only letters.</span>
+            </span>
+        </div>
+        <!-- Year -->
+        <!-- IsrcCode -->
+        <div class="form-group"
+             ng-class="{ 'has-error': myForm.isrcCode.$dirty && myForm.isrcCode.$invalid }">
+            <label class="control-label">IsrcCode</label>
+            <input type="text" name="isrcCode" class="form-control" id="isrcCode" placeholder="IsrcCode"
+                   ng-pattern="isrcCodeFormat"
+                   ng-model="editRecord.IsrcCode" required>
+            <span ng-show="myForm.isrcCode.$dirty && myForm.isrcCode.$invalid">
+                <span ng-show="myForm.isrcCode.$error.required" class="control-label">IsrcCode is required.</span>
+                <span ng-show="myForm.isrcCode.$error.pattern" class="control-label">IsrcCode contains only letters.</span>
+            </span>
+        </div>
+        <p>
+            <input type="submit" ng-click="updateRecord()" value="Save"
+                   ng-disabled="(!myForm.artist.$dirty || myForm.artist.$invalid) || 
+                                (!myForm.albumTitle.$dirty || myForm.albumTitle.$invalid)">
+        </p>
+    </form>
+</div>

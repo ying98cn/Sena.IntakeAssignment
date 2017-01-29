@@ -23,16 +23,19 @@ namespace Sena.IntakeAssignment
                 "~/Scripts/respond.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/angularjs").Include(
-            "~/Scripts/angular.js"));
+                "~/Scripts/angular.js",
+                "~/Scripts/ngDialog.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/angularjsApp")
-                .IncludeDirectory("~/Scripts/app", "*.js")
+                .IncludeDirectory("~/Scripts/app/module", "*.js")
                 .IncludeDirectory("~/Scripts/app/services", "*.js")
                 .IncludeDirectory("~/Scripts/app/controllers", "*.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/bootstrap.css",
-                "~/Content/site.css"));
+                "~/Content/site.css",
+                "~/Content/ngDialog.css",
+                "~/Content/ngDialog-theme-default.css"));
 
             bundles.Add(new StyleBundle("~/bundles/customCss").Include(
                 "~/Content/app/app.css"));
