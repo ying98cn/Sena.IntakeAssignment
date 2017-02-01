@@ -7,3 +7,4 @@ C:\git\Sena.IntakeAssignment\Sena.IntakeAssignment.Data\bin\Debug\Sena.IntakeAss
 C:\git\Sena.IntakeAssignment\Sena.IntakeAssignment.Data\bin\Debug\Sena.IntakeAssignment.Data.pdb
 C:\git\Sena.IntakeAssignment\Sena.IntakeAssignment.Data\obj\Debug\Sena.IntakeAssignment.Data.dll
 C:\git\Sena.IntakeAssignment\Sena.IntakeAssignment.Data\obj\Debug\Sena.IntakeAssignment.Data.pdb
+C:\git\Sena.IntakeAssignment\Sena.IntakeAssignment.Data\obj\Debug\Sena.IntakeAssignment.Data.csprojResolveAssemblyReference.cache

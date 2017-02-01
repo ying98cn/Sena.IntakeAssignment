@@ -2,38 +2,42 @@
 @{
     ViewBag.Title = "Records";
 }
-
-<h2>Records</h2>
-
-<div ng-controller="recordController" ng-init="init()">
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Artist</th>
-                <th>AlbumTitle</th>
-                <th>CatalogueNumber</th>
-                <th>Title</th>
-                <th>Year</th>
-                <th>IsrcCode</th>
-                <th>Edit</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="record in RecordList">
-                <td>{{ record.Id }}</td>
-                <td>{{ record.Artist }}</td>
-                <td>{{ record.AlbumTitle }}</td>
-                <td>{{ record.CatalogueNumber }}</td>
-                <td>{{ record.Title }}</td>
-                <td>{{ record.Year }}</td>
-                <td>{{ record.IsrcCode }}</td>
-                <td>
-                    <button type="button" class="btn btn-primary" data-ng-click="showEditRecordDialog(record)">
-                        <i class="glyphicon glyphicon-pencil"></i> Edit
-                    </button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<div class="panel panel-default">
+    <div class="panel-heading"><h2>Records</h2></div>
+    <div class="panel-body">
+        <div ng-controller="recordController" ng-init="init()">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="display: none">Id</th>
+                        <th>Artist</th>
+                        <th>AlbumTitle</th>
+                        <th>CatalogueNumber</th>
+                        <th>Title</th>
+                        <th>Year</th>
+                        <th>IsrcCode</th>
+                        <th>Edit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="record in RecordList">
+                        <td ng-show="false">{{ record.Id }}</td>
+                        <td>{{ record.Artist }}</td>
+                        <td>{{ record.AlbumTitle }}</td>
+                        <td>{{ record.CatalogueNumber }}</td>
+                        <td>{{ record.Title }}</td>
+                        <td>{{ record.Year }}</td>
+                        <td>{{ record.IsrcCode }}</td>
+                        <td>
+                            <button type="button" class="btn btn-primary" data-ng-click="showEditRecordDialog(record)">
+                                <i class="glyphicon glyphicon-pencil"></i> Edit
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
+
+

@@ -10,7 +10,7 @@
     function recordService($http) {
         var service = {
             getRecords: getRecords,
-            addRecord: addRecord
+            editRecord: editRecord
         };
 
         return service;
@@ -19,8 +19,8 @@
             return $http.get('GetRecords');
         }
 
-        function addRecord() {
-            return $http.post('UpdateRecord');
+        function editRecord(editedRecord) {
+            return $http.post('UpdateRecord', editedRecord);
         }
     }
 })();

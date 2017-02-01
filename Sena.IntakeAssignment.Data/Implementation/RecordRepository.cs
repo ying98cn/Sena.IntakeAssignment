@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Sena.IntakeAssignment.Data.Model;
 using Sena.IntakeAssignment.Data.Interface;
+using System.Linq;
 
 namespace Sena.IntakeAssignment.Data.Repository
 {
@@ -172,7 +173,22 @@ namespace Sena.IntakeAssignment.Data.Repository
 
         public Record Update(Record record)
         {
-            throw new NotImplementedException();
+            var oldRecord = _records.Where(r => r.Id == record.Id).FirstOrDefault();
+            if(oldRecord == null)
+            {
+                throw new Exception("Cannot find the edited record in the list.");
+            }
+            int index = _records.IndexOf(oldRecord);
+            if (index != -1)
+            {
+                _records[index] = record;
+            }
+            else
+            {
+                throw new Exception(string.Format("Cannot find the rocord with id {0}.", record.Id));
+            }
+
+            return record;
         }
 
         public bool Add(Record record)

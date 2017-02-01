@@ -1,4 +1,6 @@
 ﻿using Sena.IntakeAssignment.Data.Interface;
+using Sena.IntakeAssignment.Data.Model;
+using System;
 using System.Web.Mvc;
 
 namespace Sena.IntakeAssignment.Controllers
@@ -48,6 +50,22 @@ namespace Sena.IntakeAssignment.Controllers
         {
             var records = _recordRepository.FetchRecordList();
             return Json(records, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpPost]
+        public JsonResult UpdateRecord(Record record)
+        {
+            try
+            {
+                var records = _recordRepository.Update(record);
+                return Json(new { message = "The existing user is updated." });
+            }
+            catch(Exception ex)
+            {
+                // todo: add to log
+
+                return Json(new { message = string.Format("Something went wrong. Due to {0}.", ex.Message) });
+            }
         }
 
     }

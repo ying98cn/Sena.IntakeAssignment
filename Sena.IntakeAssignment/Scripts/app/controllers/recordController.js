@@ -12,6 +12,10 @@
             getRecords();
         }
 
+        // inputs validation patterns
+        $scope.namePattern = /^[A-Za-z\s]+$/;
+        $scope.yearFormat = /^\d{4}$/;
+
         $scope.record = {
             'artist': '',
             'albumTitle': '',
